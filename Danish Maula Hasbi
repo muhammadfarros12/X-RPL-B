@@ -8,3 +8,4 @@ fun main(){
         else -> println("bukan dua dua nya")
     }
 }
+// https://github.com/DanishMaula
