@@ -1,0 +1,12 @@
+// if & else condition
+
+fun main(){
+     val nilai = 75
+     if(nilai >= 85){
+         print("anda lulus")
+        
+     } else{
+         println("anda gagal")
+     }
+
+ }
