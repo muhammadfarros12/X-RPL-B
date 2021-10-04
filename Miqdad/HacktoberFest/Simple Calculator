@@ -30,3 +30,5 @@ fun main(){
         println("angka yang di masukka tidak valid")
     }
 }
+
+// this is simple calculator
