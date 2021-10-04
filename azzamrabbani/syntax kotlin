@@ -1,0 +1,12 @@
+// coletions map
+fun main(){
+    val ibukota = mapOf(
+        "riyadh" to "saudi arabia",
+        "kuala lumpur" to "malaysia",
+        "doha" to "qatar"
+    )
+
+    println(ibukota["riyadh"])
+    println(ibukota.getValue("doha"))
+
+}
