@@ -1,0 +1,58 @@
+interface Penjumlahan {
+    fun tambah()
+    fun kurang()
+    fun kali()
+}
+class Hasil():Penjumlahan {
+
+
+    val nilaiMatematika = 88
+    val nilaiInggris = 93
+    val nilaiSejarah = 100
+
+
+
+    override fun tambah() {
+        if (nilaiMatematika >= 90 && nilaiMatematika <= 100){
+            println("anda dapat predikat a")
+        }else if(nilaiMatematika >=80 && nilaiMatematika <= 89){
+            println("anda dapat b")
+        }else if(nilaiMatematika >=70 && nilaiMatematika <= 79) {
+            println("anda dapat c")
+        }else{
+             println("anda dapat d")
+        }
+    }
+
+    override fun kurang() {
+        if (nilaiInggris >= 90&& nilaiInggris<= 100) {
+            println("anda dapat a")
+        }else if(nilaiInggris >= 80 && nilaiInggris <= 89){
+            println("anda dapat b")
+        }else if (nilaiInggris >= 70 && nilaiInggris <= 79 ){
+            println("anda dapat c")
+        }else{
+            println("anda dapat d")
+        }
+    }
+
+    override fun kali() {
+        if (nilaiSejarah >= 90 && nilaiSejarah <= 100 ){
+            println("anda dapat a")
+        }else if(nilaiSejarah >= 80 && nilaiSejarah <= 89){
+            println("anda dapat b")
+        }else if(nilaiSejarah >= 70 && nilaiSejarah <= 79){
+            println("anda dapat c")
+        }else{
+            println("anda dapat d")
+        }
+    }
+
+}
+fun main() {
+    val hasilPenjumlahan2 = Hasil()
+    hasilPenjumlahan2.tambah()
+    hasilPenjumlahan2.kurang()
+    hasilPenjumlahan2.kali()
+
+}
