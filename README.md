@@ -5,5 +5,5 @@ _* Nama [Github](Link Github kalian)_.
 Contributor:  
 - muhammad farroos al ammaar [Github](https://github.com/muhammadfarros12)  
 - [auliamnaufal](https://github.com/auliamnaufal)
-
+- Ahmad Miqdad [Github](https://github.com/miqdad08)
 
