@@ -1,0 +1,10 @@
+// Index pd kotlin
+
+fun main(){
+   val rumah = arrayOf("kecil", "besar", 10, 'q')
+   println(rumah[1])
+   println(rumah[3])
+   rumah.set(2, "gede")
+    println(rumah[2])
+}
+//https://github.com/DanishMaula

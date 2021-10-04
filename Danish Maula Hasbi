@@ -1,0 +1,11 @@
+//Control flow : When Expression
+
+fun main(){
+   val x = 9
+    when(x){
+        5 ->println("x adalah 5")
+        8 ->println("x adalah 8")
+        else -> println("bukan dua dua nya")
+    }
+}
+// https://github.com/DanishMaula
