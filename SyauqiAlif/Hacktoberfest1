@@ -1,0 +1,113 @@
+fun main() {
+    println("""
+        Password Please or Your Full Name
+    """.trimIndent())
+    println("""
+        Be careful!!, it's cASe SenSItiVe
+        Indexes:
+        - 070706
+        - syauqi alif ibrahim
+        - muhammad farros
+        - i forgot
+    """.trimIndent())
+    val reada = readLine()
+    when (reada) {
+        "070706" -> info1()
+        "syauqi alif ibrahim" -> info2()
+        "i forgot" -> info3()
+        "muhammad farros" -> info4()
+        else -> {
+            println("Password incorrect")
+            main()
+        }
+    }
+}
+
+fun info1(){
+    println("""
+        Be careful!!, it's cASe SenSItiVe
+        indexes:
+        - Razzan
+        - Fadi
+        - Salim
+    """.trimIndent())
+    do {
+        println("Second Authentication!!")
+        val read = readLine()
+        when (read) {
+            "Razzan" -> println("Hi, Alif!")
+            "Fadi" -> println("Hi, Alif!")
+            "Salim" -> println("Hi, Farros")
+            else -> {
+                println("Sorry, we don't recognize you...")
+                do {
+                    var i = 0
+                    i++
+                    print(".")
+                } while (i > 10)
+                main()
+            }
+        }
+    } while (read == null)
+}
+
+fun info2(){
+    println("Second Verification!")
+    println("""
+        Be careful!!, it's cASe SenSItiVe
+        indexes:
+        - Syalifi859cdv
+        - (write anything)
+    """.trimIndent())
+    val read = readLine()
+    if (read == "Syalifi859cdv"){
+        println("You are an admin please continue!!")
+        info1()
+    } else {
+        println("Welcome, Guest")
+    }
+}
+
+fun info3(){
+    println("Do you really forget your Password?\nType \"Y\" for Yes and \"N\" for No.")
+    val read = readLine()
+    if (read == "Y" || read == "y"){
+        println("What is your favorite food?")
+        println("""
+            Be careful!!, it's cASe SenSItiVe
+            indexes:
+            - antep
+            - pizza
+            - amaar12
+        """.trimIndent())
+        val reada = readLine()
+        when (reada){
+            "antep" -> info1()
+            "pizza" -> info1()
+            "amaar12" -> info4()
+            else -> {
+                println("Going Back...")
+                main()
+            }
+        }
+    }
+}
+
+fun info4(){
+    println("Are you sure?")
+    println("""
+        Be careful!!, it's cASe SenSItiVe
+        indexes:
+        - i like kotlin :)
+        - i am 100 IQ
+    """.trimIndent())
+    val read = readLine()
+    when (read) {
+        "i like kotlin :)" -> println("Hai, there Farros!")
+        "i am 100 IQ" -> println("Yes, you are!")
+        else -> {
+            println("sadly you're not farros!")
+            main()
+        }
+    }
+}
