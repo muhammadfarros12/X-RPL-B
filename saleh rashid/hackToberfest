@@ -1,0 +1,6 @@
+fun main(){
+    identitas("saleh", 17, "brebes", 14, "juli", 2004)
+}
+fun identitas (name: String, umur: Int, tinggal: String, tanggal: Int, bulan: String, tahun: Int){
+    println("halo nama saya $name, aku berumur $umur tahun, dan saya tinggal di $tinggal, saya lahir tanggal $tanggal $bulan $tahun")
+}
