@@ -1,0 +1,13 @@
+// Control flow : If & else condition
+
+fun main(){
+     val nilai = 69
+    
+    
+     if(nilai >= 70){
+         println("anda lulus")
+     } else {
+         println("anda gagal")
+     }
+    
+ }

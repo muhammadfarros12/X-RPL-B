@@ -1,0 +1,7 @@
+// Null safe kotlin
+
+fun main(){
+    val saya: String? = null
+    val laptop = saya?.length ?: "pengganti laptop"
+    println(laptop)
+}
