@@ -1,0 +1,10 @@
+// Code : String Tample
+
+fun main(){
+    val fName = "Nabiih"
+    val lName = "Firdaus"
+    val fullname = "$fName ${lName.length}"
+
+    print(fullname)
+
+}
