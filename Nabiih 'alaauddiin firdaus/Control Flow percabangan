@@ -1,0 +1,11 @@
+// Struktur Code
+
+fun main(){
+    val nilai = 94
+    
+    if (nilai > 92){
+        println("anda mendapatkan nilai A")
+    } else{
+        println("anda harus mencoba lagi")
+    }
+}
