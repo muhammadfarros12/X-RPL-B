@@ -1,0 +1,88 @@
+fun main() {
+    startHFc()
+}
+
+fun startHFc() {
+    println("""
+        ----------------------------------
+        It's an 
+        "odd and even difference machine"
+        By Alif - X RPL B
+        ----------------------------------
+        Do you want to continue? (yes/no)
+    """.trimIndent())
+    val a = readLine()
+    val b = arrayOf(
+        "What are you typing?", "I don't say if there's \"$a\" in the list",
+        "Nice type - O", "Huh? what is that?", "Error lol", "There's something behind you",
+        "Did you know that \"Alif\" is the only one who can laugh even though he is sick",
+        "Fun fact! I want to be a Full-Stack developer", "Is C++ language is easy?",
+        "\"$a\" is not what i want", "Try to type \"i am kotlin\" something will happen!",
+        "Try to learn using Mac OS tho", ""
+    )
+    if (a == "yes") {
+        runHFc()
+    } else if (a == "no") {
+        println("""
+            GoodBye then,
+            you even not yet use this machine :,(
+        """.trimIndent())
+    } else if (a == "i am kotlin"){
+        println("Aaaaah, so you're not a human... Wkwkwkwkwk")
+        startHFc()
+    } else {
+        println("\n${b.random()}")
+        startHFc1()
+    }
+}
+
+fun startHFc1() {
+    println("Do you want to continue? (yes/no)")
+    val a = readLine()
+    val b = arrayOf(
+        "What are you typing?", "I don't say if there's \"$a\" in the list",
+        "Nice type - O", "Huh? what is that?", "Error lol", "There's something behind you",
+        "Did you know that \"Alif\" is the only one who can laugh even though he is sick",
+        "Fun fact! I want to be a Full-Stack developer", "Is C++ language is easy?",
+        "\"$a\" is not what i want", "Try to type \"i am kotlin\" something will happen!",
+        "Try to learn using Mac OS tho", "Wkwkwkwkwkw nice try"
+    )
+    if (a == "yes") {
+        runHFc()
+    } else if (a == "no") {
+        println("""
+            GoodBye then,
+            Thank You, you already use my beautiful machine :)
+        """.trimIndent())
+    } else if (a == "i am kotlin"){
+        println("Aaaaah, so you're not a human... Wkwkwkwkwk")
+        startHFc1()
+    } else {
+        println("\n${b.random()}")
+        startHFc1()
+    }
+}
+
+fun runHFc() {
+    println("""
+        ----------------------------------
+        Okay, Please type the first number (to start from where)
+        ----------------------------------
+    """.trimIndent())
+    var a = readLine()?.toInt() ?: 0
+    println("""
+        ----------------------------------
+        Now, Please type the second number (to end at where)
+        ----------------------------------
+    """.trimIndent())
+    val b = readLine()?.toInt() ?: 0
+    do {
+        if (a%2 == 0) {
+            println("$a = Even")
+        } else if (a%2 != 0) {
+            println("$a = Odd")
+        }
+        a++
+    } while (a <= b)
+    startHFc1()
+}
