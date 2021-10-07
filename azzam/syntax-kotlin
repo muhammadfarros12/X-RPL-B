@@ -1,0 +1,22 @@
+//aritmatika
+fun main(){
+    sum(1,1)
+    sub(10,5)
+    multiplication(200,12)
+    division(21,20)
+    
+}
+fun sum (a: Int , b: Int){
+    println(a + b)
+}
+fun sub (a: Int , b : Int){
+    println(a - b)
+}
+fun multiplication (a: Int , b: Int){
+    println(a * b)
+}
+fun division (a: Int , b:Int){
+    println(a / b)
+}
+
+	
