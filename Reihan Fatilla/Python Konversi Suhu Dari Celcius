@@ -1,0 +1,8 @@
+celci = int(input("Masukkan Suhu Celcius = "))
+reamer = 4 / 5 * celci
+fahren = 9 / 5 * celci + 32
+kelvin = celci + 273
+
+print("%d celcius = %d Reamur"%(celci, reamer))
+print("%d celcius = %d Fahrenheit"%(celci, fahren))
+print("%d celcius = %d Kelvin"%(celci, kelvin))
