@@ -1,0 +1,8 @@
+alas = int(input("Masukkan Alas : "))
+tinggi = int(input("Masukkan Lebar : "))
+
+keliling = (alas * 2) + (tinggi * 2)
+luas = alas * tinggi
+
+print("""Keliling Jajar Genjang = %d
+Luas Jajar Genjang = %d""" %(keliling, luas))
