@@ -7,3 +7,4 @@ muhammad farroos al ammaar [Github](https://github.com/muhammadfarros12)
 Contributor:  
 - M. Naufal Aulia [Github](https://github.com/auliamnaufal)
 - Ahmad Miqdad [Github](https://github.com/miqdad08)
+- Naufal Rachmandani [Github](https://github.com/NaufalRachmandani)
