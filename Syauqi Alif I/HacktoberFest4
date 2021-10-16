@@ -1,0 +1,375 @@
+fun main() {
+    startHFd()
+}
+fun startHFd() {
+    println("""
+        
+        ============================================
+        Hello, Welcome to My App
+        V. 1.0
+        ============================================
+        Hi!, What can i do for you?
+
+        Lists :
+        - Converter Temperature             -> Type "D"
+        - Calculator Machine                -> Type "C"
+        - Odd and Even Difference Machine   -> Type "B"
+        - Fun Facts!                        -> Type "A"
+        - Shut Down                         -> Type "Q"
+        ============================================
+        Type Below to run the Machines
+    """.trimIndent())
+    val calculator = Kalkulator()
+    val difference = MesinBeda()
+    val facts = FaktaKu()
+    val converter = Konversi()
+    when (readLine()) {
+        "D", "d" -> converter.start()
+        "C", "c" -> calculator.start()
+        "B", "b" -> difference.start()
+        "A", "a" -> facts.start()
+        "Q", "q" -> println("""
+        
+        =======================================
+        Thank you for using!!
+        Have a nice day dude!
+        =======================================
+        App has been Shut Downed.
+        =======================================
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        """.trimIndent())
+    }
+}
+class Kalkulator {
+    fun start() {
+        println("""
+        =======================================
+        Welcome!, to a
+        "Calculator Machine" App
+        By Alif - X RPL B
+        =======================================
+        Please type "y" to continue
+        or type "n" to quit
+        =======================================
+        Type the command below!
+        """.trimIndent())
+        val a = readLine()
+        if (a == "y" || a == "Y") {
+            c1()
+        } else if (a == "n" || a == "N") {
+            println("""
+                
+                =======================================
+                Quitting the Calculator Machine...
+                =======================================
+                
+                """.trimIndent())
+            startHFd()
+        } else {
+            println("I don't say if there's \"$a\" in the list")
+            start()
+        }
+    }
+    private fun c1() {
+        println("""
+        ===================================
+        Okay,
+        Type the first number below!
+        ===================================
+        """.trimIndent())
+        val a = readLine()?.toLong() ?: 0
+        println("""
+        
+        Type the symbol operator below!
+        ===================================
+        Operator lists :
+        - "+" for "Plus"
+        - "-" for "Minus"
+        - ":" for "Divided"
+        - "*" for "Multiplied"
+        - "%" for "Modulus"
+        ===================================
+        """.trimIndent())
+        val aa = readLine() ?: "0"
+        println("Type the second number below!")
+        val ab = readLine()?.toLong() ?: 0
+        c1a(a, aa, ab)
+    }
+    private fun c1a(num1: Long?, symb: String?, num2: Long?) {
+        when (symb) {
+            "+" -> {
+                val aa = num2?.let { num1?.plus(it) }
+                println("Results : $num1 $symb $num2 = $aa")
+                start()
+            }
+            "-" -> {
+                val ab = num2?.let { num1?.minus(it) }
+                println("Results : $num1 $symb $num2 = $ab")
+                start()
+            }
+            ":" -> {
+                val ac = num2?.let { num1?.div(it) }
+                println("Results : $num1 $symb $num2 = $ac")
+                start()
+            }
+            "*" -> {
+                val ad = num2?.let { num1?.times(it) }
+                println("Results : $num1 $symb $num2 = $ad")
+                start()
+            }
+            "%" -> {
+                val ae = num2?.let { num1?.rem(it) }
+                println("Results : $num1 $symb $num2 = $ae")
+                start()
+            }
+        }
+    }
+}
+class MesinBeda {
+    fun start() {
+        println("""
+        =======================================    
+        Welcome!, to an
+        "odd and even difference machine" App
+        By Alif - X RPL B
+        =======================================
+        Please type "y" to continue
+        or type "n" to quit
+        =======================================
+        """.trimIndent())
+        val a = readLine() ?: "0"
+        when (a) {
+            "y", "Y" -> b1()
+            "n", "N" -> startHFd()
+            else -> {
+                println("""
+                There's no "$a" in the list
+                :(
+            """.trimIndent())
+                start()
+            }
+        }
+    }
+    private fun b1() {
+        println("""
+        =======================================
+        Okay, Please type the first number
+        (to start from where)
+        ---------------------------------------
+        *Note : Remember that you can only type numbers!
+        or else the system will broken!
+        =======================================
+    """.trimIndent())
+        var a = readLine()?.toInt() ?: 0
+        println("""
+        
+        =======================================
+        Great, Now, Please type the second number
+        (to end at where)
+        =======================================
+    """.trimIndent())
+        val b = readLine()?.toInt() ?: 0
+        do {
+            if (a%2 == 0) {
+                println("$a = Even")
+            } else if (a%2 != 0) {
+                println("$a = Odd")
+            }
+            a++
+        } while (a <= b)
+        println("""
+            
+        =======================================
+        Process completed!
+        =======================================
+        """.trimIndent())
+        start()
+    }
+}
+class FaktaKu {
+    fun start() {
+        val facts = arrayOf(
+            "X RPL B, Is the only class in 10th grade that have a linux user (and his name is Saleh)",
+            "Fun Fact! = X RPL A Does more like python more than Kotlin Programmin Languages",
+            "Google?... , Nah.. I want Microsoft azure",
+            "Who said that i can't move from my chair? >:|",
+            "Marva is my friend that he is the only one who never \"Berkata kasar\"",
+            "Nulls. I hate nulls",
+            "I'm an \"Imaginer\"",
+            "Some people said \"I am always laughing or smiiling\", Why? Cause it's my personality tho",
+            "Did you know? For about 2 weeks straight ahead I'm just lopping my lessons",
+            "Rick Rolled",
+            "type this : s.id/123321A"
+        )
+        println("""
+            =======================================
+            ${facts.random()}
+            =======================================
+            """.trimIndent())
+        startHFd()
+    }
+}
+class Konversi {
+    fun start() {
+        println("""
+        =======================================
+        Welcome!, to a
+        "Temperature Converter" App
+        By Alif - X RPL B
+        =======================================
+        Please type "y" to continue
+        or type "n" to quit
+        =======================================
+        Type the command below!
+        """.trimIndent())
+        val a = readLine()
+        if (a == "y" || a == "Y") {
+            d1()
+        } else if (a == "n" || a == "N") {
+            println("""
+                
+                =======================================
+                Quitting the "Temperature Converter" App
+                =======================================
+                
+                """.trimIndent())
+            startHFd()
+        } else {
+            println("\"a\" is not found in the list :(")
+            start()
+        }
+    }
+    private fun d1() {
+        println("""
+            =======================================
+            Let's Roll!!
+            But... First you need to choose.
+            From what to what?
+            =======================================
+            Type "1" to convert Celcius to Others
+            Type "2" to convert Reamur to Others
+            Type "3" to convert Fahrenheit to Others
+            Type "4" to convert Kelvin to Others
+            And Type "0" to Quit the App
+            =======================================
+        """.trimIndent())
+        val a = readLine()?.toInt() ?: 0
+        when (a) {
+            1 -> celsius()
+            2 -> reaumur()
+            3 -> fahrenheit()
+            4 -> kelvin()
+            0 -> startHFd()
+            else -> {
+                println("error")
+                d1()
+            }
+        }
+    }
+    private fun celsius() {
+        println("""
+            =======================================
+            "Celsius to Others"
+            Now, Please input the Celsius number
+            to convert
+            =======================================
+        """.trimIndent())
+        val c = readLine()?.toInt() ?: 0
+        val hasilReamur = (4/5) * c
+        val hasilFahrenheit = (9/5) * c + 32
+        val hasilKelvin = c + 273.15
+        println("""
+            =======================================
+            Results Convert:
+            - To Reaumur    = $hasilReamur R
+            - To Fahrenheit = $hasilFahrenheit F
+            - To Kelvin     = $hasilKelvin K
+            =======================================
+            
+            =======================================
+            Process Completed!
+            =======================================
+            
+        """.trimIndent())
+        d1()
+    }
+    private fun reaumur() {
+        println("""
+            =======================================
+            "Reaumur to Others"
+            Now, Please input the Reaumur number
+            to convert
+            =======================================
+        """.trimIndent())
+        val r = readLine()?.toInt() ?: 0
+        val hasilCelsius = r / 0.8
+        val hasilFahrenheit = (r * 2.25) + 32
+        val hasilKelvin = (r / 0.8) + 273.15
+        println("""
+            =======================================
+            Results Convert:
+            - To Celsius    = $hasilCelsius C
+            - To Fahrenheit = $hasilFahrenheit F
+            - To Kelvin     = $hasilKelvin K
+            =======================================
+            
+            =======================================
+            Process Completed!
+            =======================================
+            
+        """.trimIndent())
+        d1()
+    }
+    private fun fahrenheit() {
+        println("""
+            =======================================
+            "Fahrenheit to Others"
+            Now, Please input the Fahrenheit number
+            to convert
+            =======================================
+        """.trimIndent())
+        val f = readLine()?.toInt() ?: 0
+        val hasilCelsius = (f - 32) * 5/9
+        val hasilReaumur = 4/9 * (f - 32)
+        println("""
+            =======================================
+            Results Convert:
+            - To Celsius    = $hasilCelsius C
+            - To Reaumur    = $hasilReaumur R
+            There's no convert result for Kelvin in Fahrenheit
+            =======================================
+            
+            =======================================
+            Process Completed!
+            =======================================
+            
+        """.trimIndent())
+        d1()
+    }
+    private fun kelvin() {
+        println("""
+            =======================================
+            "Kelvin to Others"
+            Now, Please input the Kelvin number
+            to convert
+            =======================================
+        """.trimIndent())
+        val a = readLine()?.toInt() ?: 0
+        val hasilCelsius = a - 273.15
+        val hasilReaumur = (a - 273.15) * 0.8
+        println("""
+            =======================================
+            Results Convert:
+            - To Celsius    = $hasilCelsius C
+            - To Reaumur    = $hasilReaumur R
+            There's no convert result for Fahrenheit in Kelvin
+            =======================================
+            
+            =======================================
+            Process Completed!
+            =======================================
+            
+        """.trimIndent())
+        d1()
+    }
+}
