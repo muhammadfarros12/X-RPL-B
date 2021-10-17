@@ -8,3 +8,4 @@ Contributor:
 - M. Naufal Aulia [Github](https://github.com/auliamnaufal)
 - Ahmad Miqdad [Github](https://github.com/miqdad08)
 - Naufal Rachmandani [Github](https://github.com/NaufalRachmandani)
+- Syauqi Alif Ibrahim [Github](https://github.com/SyauqiAlifI)
