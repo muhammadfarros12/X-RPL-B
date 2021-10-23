@@ -1,0 +1,28 @@
+class teacher(val nama: String, val jam: Int, val mapel: String){
+    fun mengajar(){
+        println("$nama mengajar di jam $jam pada mata pelajaran $mapel")
+    }
+}
+
+class teacher2(val nama: String, val jam: Int, val mapel: String){
+    fun mengajar2(){
+        println("$nama mengajar di jam $jam pada mata pelajaran $mapel")
+    }
+}
+
+class teacher3(val nama: String, val jam: Int, val mapel: String){
+    fun mengajar3(){
+        println("$nama mengajar di jam $jam pada mata pelajaran $mapel")
+    }
+}
+
+fun main() {
+    val guru = teacher("nugroho", 10, "android")
+    guru.mengajar()
+
+    val guru2 = teacher2("ucil", 12, "ct")
+    guru2.mengajar2()
+
+    val guru3= teacher3("ahmad", 2, "iOS")
+    guru3.mengajar3()
+}
